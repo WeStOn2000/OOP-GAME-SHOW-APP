@@ -1,6 +1,6 @@
 const game = new Game();
 
-const startButton = document.querySelector('.btn__reset');
+const startButton = document.querySelector('#btn__reset');
 startButton.addEventListener('click', () => {
   game.startGame();
 });
