@@ -1,6 +1,6 @@
 //this code Here we will define the Game class, which will be responsible for managing the game's state, logic, and interactions.
 class Game {
-    constructor() {
+    constructor(phrases , missed , activePhrase) {
 //this code is an array of five Phrase objects to use with the game.
         this.phrases = ['WOW!', 'Almost!', "Hmmm!","maybe!","try harder!"]; 
       //This code is the Phrase object that’s currently in play.
