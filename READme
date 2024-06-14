@@ -1,0 +1,13 @@
+# Phrase Hunter Game
+
+Welcome to the Phrase Hunter Game! This game challenges players to guess a hidden phrase by selecting letters from an onscreen keyboard or using their physical keyboard. It's a fun and engaging way to test your guessing skills.
+
+
+
+## CSS Changes
+
+The CSS for the Phrase Hunter Game has been enhanced to provide a visually appealing and user-friendly interface. Here are the key CSS changes:
+
+1. **Main Layout**:
+   - changed background color of body and buttons
+   - And button colors

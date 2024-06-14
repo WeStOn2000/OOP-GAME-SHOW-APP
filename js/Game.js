@@ -2,7 +2,7 @@
 class Game {
     constructor(phrases , missed , activePhrase) {
 //this code is an array of five Phrase objects to use with the game.
-        this.phrases = ['WOW!', 'Almost!', "Hmmm!","maybe!","try harder!"]; 
+        this.phrases = ['WOW', 'Almost', "Hmmm","maybe","try harder"]; 
       //This code is the Phrase object that’s currently in play.
         this.activePhrase = null;
 
