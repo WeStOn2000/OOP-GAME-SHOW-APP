@@ -2,7 +2,13 @@
 class Game {
     constructor(phrases , missed , activePhrase) {
 //this code is an array of five Phrase objects to use with the game.
-        this.phrases = ['WOW', 'Almost', "Hmmm","maybe","try harder"]; 
+        this.phrases = [
+          new Phrase('oops'), 
+          new Phrase('wow'), 
+          new Phrase("yeah "),
+          new Phrase("almost "),
+          new Phrase("closer")
+        ]; 
       //This code is the Phrase object that’s currently in play.
         this.activePhrase = null;
 
@@ -13,8 +19,8 @@ class Game {
     startGame() {
       this.resetGame(); 
       this.hideOverlay();
-      this.activePhrase = this.getRandomPhrase();
-      this.addPhraseToDisplay(this.activePhrase);
+      this.activePhrase = new Phrase(this.getRandomPhrase());
+      this.activePhrase.addPhraseToDisplay(); 
     }
  //this method randomly retrieves one of the phrases stored in the phrases array and returns it.
  getRandomPhrase() {
@@ -32,12 +38,12 @@ class Game {
       const keys = document.querySelectorAll('.key');
       const selectedKey = Array.from(keys).find(key => key.textContent === selectedLetter);
   
-      if (!this.activePhrase.includes(selectedLetter)) {
+      if (!this.activePhrase.checkLetter(selectedLetter)) {
         selectedKey.classList.add('wrong');
         this.removeLife();
       } else {
         selectedKey.classList.add('chosen');
-        this.showMatchedLetter(selectedLetter);
+        this.activePhrase.showMatchedLetter(selectedLetter);
         if (this.checkForWin()) {
           this.gameOver('win');
         }

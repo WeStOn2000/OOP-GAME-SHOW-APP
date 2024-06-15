@@ -1,7 +1,7 @@
 //this code  is the actual phrase the Phrase object is representing
 class Phrase {
     constructor(phrase) {
-      this.phrase = phrase.toLowerCase();
+      this.phrase =  phrase.toLowerCase();
     }
   // this code adds letter placeholders to the display when the game starts.
     addPhraseToDisplay() {
