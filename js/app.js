@@ -1,8 +1,7 @@
 // A new instance of Game
-const game = new Game();
-// Create a new instance of Game
-const startButton = document.querySelector('#btn__reset');
-startButton.addEventListener('click', () => {
+const startButton = document.querySelector("#btn__reset");
+startButton.addEventListener("click", () => {
+  game = new Game();
   game.startGame();
 });
 // Event delegation for onscreen keyboard buttons
