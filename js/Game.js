@@ -1,13 +1,13 @@
 //this code Here we will define the Game class, which will be responsible for managing the game's state, logic, and interactions.
 class Game {
-    constructor(phrases , missed , activePhrase) {
+    constructor(phrases) {
 //this code is an array of five Phrase objects to use with the game.
         this.phrases = [
-          new Phrase('oops'), 
-          new Phrase('wow'), 
-          new Phrase("yeah "),
-          new Phrase("almost "),
-          new Phrase("closer")
+          new Phrase('creator'), 
+          new Phrase('ajax'), 
+          new Phrase("developer tools"),
+          new Phrase("Javascript programming"),
+          new Phrase("css")
         ]; 
       //This code is the Phrase object that’s currently in play.
         this.activePhrase = null;
@@ -19,7 +19,7 @@ class Game {
     startGame() {
       this.resetGame(); 
       this.hideOverlay();
-      this.activePhrase = new Phrase(this.getRandomPhrase());
+      this.activePhrase = this.getRandomPhrase();
       this.activePhrase.addPhraseToDisplay(); 
     }
  //this method randomly retrieves one of the phrases stored in the phrases array and returns it.
